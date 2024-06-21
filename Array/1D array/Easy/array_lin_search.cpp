@@ -10,7 +10,14 @@ bool linear(int arr[],int key,int n){
 }
 int main()
 {
-    
+    int arr[5] = {31,325,65,464,5432};
+
+    if(linear(arr,65,5)){
+        cout<<"element present";
+    }
+    else{
+        cout<<"Element not present";
+    }
     cout<<endl;
     return 0;
 }
