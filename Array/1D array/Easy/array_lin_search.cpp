@@ -12,7 +12,7 @@ int main()
 {
     int arr[5] = {31,325,65,464,5432};
 
-    if(linear(arr,65,5)){
+    if(linear(arr,87897,5)){
         cout<<"element present";
     }
     else{
