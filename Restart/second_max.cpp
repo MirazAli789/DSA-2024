@@ -31,7 +31,7 @@ int second_max2(vector<int> arr)
             max2 = max1;
             max1 = arr[i];
         }
-        else if (arr[i] > max2 )
+        else if (arr[i] > max2 && arr[i]<max1)
         {
             max2 = arr[i];
         }
