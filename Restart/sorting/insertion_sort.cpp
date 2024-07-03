@@ -1,5 +1,6 @@
 // In every iteration we take an element to its correct position
-
+// Time complexity: O(n) for best
+// O(n^2) for worst and average case
 #include <bits/stdc++.h>
 using namespace std;
 void insertion(int arr[], int n)
