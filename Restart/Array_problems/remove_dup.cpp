@@ -6,6 +6,7 @@ int remove_duplicates(vector<int> &arr)
     int n = arr.size();
     int i = 0, j = 1;
     while (j < n)
+    
     {
         if (arr[i] == arr[j])
         {
