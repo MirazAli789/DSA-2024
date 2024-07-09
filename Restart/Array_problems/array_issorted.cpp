@@ -8,10 +8,12 @@ bool is_sorted(vector<int>arr){
         }
     }
     return 1;
+    set<int>st;
+    
 }
 int main()
 {
-    vector<int>arr = {1,2,1,5};
+    vector<int>arr = {1,2,2,5};
     cout<<is_sorted(arr);
     cout<<endl;
     return 0;
