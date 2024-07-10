@@ -1,14 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> union_of_array(int arr1[], int arr2[], int n, int m)
+vector<int> union_of_array(vector<int> arr1, vector<int> arr2)
 {
-    vector<int> ans;
+    int n = arr1.size();
+    int m = arr2.size();
     int i = 0, j = 0;
+    vector<int> ans;
     while (i < n && j < m)
     {
         if (arr1[i] <= arr2[j])
         {
-            if (find(ans.begin(), ans.end(), arr1[i]) != ans.end())
+            if (ans.empty() || ans.back() != arr1[i])
             {
                 ans.push_back(arr1[i]);
             }
@@ -16,7 +18,7 @@ vector<int> union_of_array(int arr1[], int arr2[], int n, int m)
         }
         else
         {
-            if (find(ans.begin(), ans.end(), arr2[j]) != ans.end())
+            if (ans.empty() || ans.back() != arr2[j])
             {
                 ans.push_back(arr2[j]);
             }
@@ -25,7 +27,7 @@ vector<int> union_of_array(int arr1[], int arr2[], int n, int m)
     }
     while (i < n)
     {
-        if (find(ans.begin(), ans.end(), arr1[i]) != ans.end())
+        if (ans.empty() || ans.back() != arr1[i])
         {
             ans.push_back(arr1[i]);
         }
@@ -33,7 +35,7 @@ vector<int> union_of_array(int arr1[], int arr2[], int n, int m)
     }
     while (j < m)
     {
-        if (find(ans.begin(), ans.end(), arr2[j]) != ans.end())
+        if (ans.empty() || ans.back() != arr2[j])
         {
             ans.push_back(arr2[j]);
         }
@@ -44,7 +46,13 @@ vector<int> union_of_array(int arr1[], int arr2[], int n, int m)
 int main()
 {
 
-
+    vector<int> arr1 = {3, 4, 7, 7, 8, 8, 8};
+    vector<int> arr2 = {1, 2, 2, 3, 3, 3};
+    vector<int> ans = union_of_array(arr1, arr2);
+    for (auto it : ans)
+    {
+        cout << it << " ";
+    }
     cout << endl;
     return 0;
 }
