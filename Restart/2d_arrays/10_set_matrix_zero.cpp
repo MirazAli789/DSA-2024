@@ -16,23 +16,33 @@ void set_matrix_zero(int arr[][4], int row, int col)
             }
         }
     }
+    // for (int i = 0; i < row_ind.size(); i++)
+    // {
+    //     if (row_ind[i] == 1)
+    //     {
+    //         for (int j = 0; j < col; j++)
+    //         {
+    //             arr[i][j] = 0;
+    //         }
+    //     }
+    // }
+    // for (int i = 0; i < col_ind.size(); i++)
+    // {
+    //     if (col_ind[i] == 1)
+    //     {
+    //         for (int j = 0; j < row; j++)
+    //         {
+    //             arr[j][i] = 0;
+    //         }
+    //     }
+    // }
     for (int i = 0; i < row_ind.size(); i++)
     {
-        if (row_ind[i] == 1)
+        for (int j = 0; j < col_ind.size(); j++)
         {
-            for (int j = 0; j < col; j++)
+            if (row_ind[i] == 1 || col_ind[j] == 1)
             {
                 arr[i][j] = 0;
-            }
-        }
-    }
-    for (int i = 0; i < col_ind.size(); i++)
-    {
-        if (col_ind[i] == 1)
-        {
-            for (int j = 0; j < row; j++)
-            {
-                arr[j][i] = 0;
             }
         }
     }
