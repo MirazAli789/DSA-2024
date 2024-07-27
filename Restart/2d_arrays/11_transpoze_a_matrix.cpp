@@ -28,6 +28,8 @@ int main()
         }
         cout << endl;
     }
+    vector<vector<int>> matrix[3][3];
     cout << endl;
+    
     return 0;
 }
