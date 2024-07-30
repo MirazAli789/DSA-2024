@@ -16,6 +16,7 @@ int bin_search(int arr[], int low, int high, int key)
         return bin_search(arr, mid + 1, high, key);
 }
 int main()
+
 {
     int arr[6] = {2, 5, 8, 13, 17, 20};
     cout << bin_search(arr, 0, 5, 17);
