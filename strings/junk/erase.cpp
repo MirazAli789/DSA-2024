@@ -9,7 +9,7 @@ int main()
 
     cout << "Enter a string \n";
     cin >> s;
-    s.erase(0, 2);
+    s.erase(1, 2);
     cout << s;
     return 0;
 }
