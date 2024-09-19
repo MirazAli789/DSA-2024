@@ -58,7 +58,7 @@ int main()
 {
     vector<int> arr = {2, 323, 42, 4, 2, 5, 235};
     node *head = arr_to_ll(arr);
-    head = insert_before(head,235,420);
+    head = insert_before(head, 235, 420);
     traverse(head);
     cout << endl;
     return 0;
