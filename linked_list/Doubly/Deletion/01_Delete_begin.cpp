@@ -64,7 +64,10 @@ node *delete_begin(node *head)
 }
 int main()
 {
-
+    vector<int> arr = {12, 4, 551, 4};
+    node *head = arr_to_dll(arr);
+    head = delete_begin(head);
+    traverse(head);
     cout << endl;
     return 0;
 }
